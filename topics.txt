@@ -1,0 +1,25 @@
+Hello World
+Values
+Variables
+Constants
+For
+If/Else
+Switch
+Arrays
+Slices
+Maps
+Range
+Functions
+Multiple Return Values
+Variadic Functions
+Closures
+Recursion
+Pointers
+Strings and Runes
+Structs
+Methods
+Interfaces
+Struct Embedding
+Generics
+Errors
+Goroutines
