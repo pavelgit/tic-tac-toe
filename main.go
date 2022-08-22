@@ -1,12 +1,24 @@
 package main
 
 import (
-	"tictactoe/game"
+	"fmt"
+	"tictactoe/gaming"
+	"tictactoe/players"
 )
 
 func main() {
-	g := game.NewGame()
-	g.PrintBoard()
-	g.Move(game.Position{X: 1, Y: 1}, game.X_CELL)
-	g.PrintBoard()
+	g := gaming.NewGame()
+
+	p := players.RandomPlayer{}
+
+	g.Board.PrintBoard()
+	for {
+		position := p.GetNextMove(&g)
+		isOver, winnerSign := g.Move(position.X, position.Y)
+		g.Board.PrintBoard()
+		if isOver {
+			fmt.Printf("%c\n", gaming.GetSignChar(winnerSign))
+			break
+		}
+	}
 }
